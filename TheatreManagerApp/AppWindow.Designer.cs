@@ -30,7 +30,6 @@ namespace TheatreManagerApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppWindow));
             this.Price_panel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.seniorPrice = new System.Windows.Forms.Label();
@@ -44,10 +43,9 @@ namespace TheatreManagerApp
             this.matPrice = new System.Windows.Forms.Label();
             this.adultPrice = new System.Windows.Forms.Label();
             this.Inventory_panel = new System.Windows.Forms.Panel();
-            this.Menu_toolstrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.Menu_panel = new System.Windows.Forms.Panel();
+            this.RestockBtn = new System.Windows.Forms.Button();
+            this.DeleteLowStockBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
@@ -62,15 +60,9 @@ namespace TheatreManagerApp
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CalendarLb = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.AdvancedDetailsLb = new System.Windows.Forms.Label();
             this.Image_Movie_Product = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.DeleteLowStockBtn = new System.Windows.Forms.Button();
-            this.RestockBtn = new System.Windows.Forms.Button();
             this.Price_panel.SuspendLayout();
-            this.Inventory_panel.SuspendLayout();
-            this.Menu_toolstrip2.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -206,40 +198,11 @@ namespace TheatreManagerApp
             // Inventory_panel
             // 
             this.Inventory_panel.BackColor = System.Drawing.Color.Coral;
-            this.Inventory_panel.Controls.Add(this.Menu_toolstrip2);
             this.Inventory_panel.Location = new System.Drawing.Point(-1, 180);
             this.Inventory_panel.Name = "Inventory_panel";
             this.Inventory_panel.Size = new System.Drawing.Size(360, 496);
             this.Inventory_panel.TabIndex = 1;
             this.Inventory_panel.Visible = false;
-            // 
-            // Menu_toolstrip2
-            // 
-            this.Menu_toolstrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.Menu_toolstrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel2,
-            this.toolStripButton2});
-            this.Menu_toolstrip2.Location = new System.Drawing.Point(0, 0);
-            this.Menu_toolstrip2.Name = "Menu_toolstrip2";
-            this.Menu_toolstrip2.Size = new System.Drawing.Size(360, 27);
-            this.Menu_toolstrip2.TabIndex = 0;
-            this.Menu_toolstrip2.Text = "toolStrip1";
-            this.Menu_toolstrip2.Visible = false;
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(86, 24);
-            this.toolStripLabel2.Text = "toolStripLabel1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "toolStripButton1";
             // 
             // Menu_panel
             // 
@@ -256,6 +219,26 @@ namespace TheatreManagerApp
             this.Menu_panel.Name = "Menu_panel";
             this.Menu_panel.Size = new System.Drawing.Size(360, 496);
             this.Menu_panel.TabIndex = 1;
+            // 
+            // RestockBtn
+            // 
+            this.RestockBtn.Location = new System.Drawing.Point(198, 316);
+            this.RestockBtn.Name = "RestockBtn";
+            this.RestockBtn.Size = new System.Drawing.Size(75, 23);
+            this.RestockBtn.TabIndex = 24;
+            this.RestockBtn.Text = "Restock";
+            this.RestockBtn.UseVisualStyleBackColor = true;
+            this.RestockBtn.Click += new System.EventHandler(this.RestockBtn_Click);
+            // 
+            // DeleteLowStockBtn
+            // 
+            this.DeleteLowStockBtn.Location = new System.Drawing.Point(279, 316);
+            this.DeleteLowStockBtn.Name = "DeleteLowStockBtn";
+            this.DeleteLowStockBtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteLowStockBtn.TabIndex = 23;
+            this.DeleteLowStockBtn.Text = "Delete";
+            this.DeleteLowStockBtn.UseVisualStyleBackColor = true;
+            this.DeleteLowStockBtn.Click += new System.EventHandler(this.DeleteLowStockBtn_Click);
             // 
             // EditBtn
             // 
@@ -422,38 +405,9 @@ namespace TheatreManagerApp
             this.Image_Movie_Product.TabIndex = 14;
             this.Image_Movie_Product.TabStop = false;
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(732, 221);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(318, 438);
-            this.listView1.TabIndex = 15;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // DeleteLowStockBtn
-            // 
-            this.DeleteLowStockBtn.Location = new System.Drawing.Point(279, 316);
-            this.DeleteLowStockBtn.Name = "DeleteLowStockBtn";
-            this.DeleteLowStockBtn.Size = new System.Drawing.Size(75, 23);
-            this.DeleteLowStockBtn.TabIndex = 23;
-            this.DeleteLowStockBtn.Text = "Delete";
-            this.DeleteLowStockBtn.UseVisualStyleBackColor = true;
-            this.DeleteLowStockBtn.Click += new System.EventHandler(this.DeleteLowStockBtn_Click);
-            // 
-            // RestockBtn
-            // 
-            this.RestockBtn.Location = new System.Drawing.Point(198, 316);
-            this.RestockBtn.Name = "RestockBtn";
-            this.RestockBtn.Size = new System.Drawing.Size(75, 23);
-            this.RestockBtn.TabIndex = 24;
-            this.RestockBtn.Text = "Restock";
-            this.RestockBtn.UseVisualStyleBackColor = true;
-            this.RestockBtn.Click += new System.EventHandler(this.RestockBtn_Click);
-            // 
             // AppWindow
             // 
             this.ClientSize = new System.Drawing.Size(1062, 673);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.Image_Movie_Product);
             this.Controls.Add(this.AdvancedDetailsLb);
             this.Controls.Add(this.panel1);
@@ -463,10 +417,6 @@ namespace TheatreManagerApp
             this.Name = "AppWindow";
             this.Price_panel.ResumeLayout(false);
             this.Price_panel.PerformLayout();
-            this.Inventory_panel.ResumeLayout(false);
-            this.Inventory_panel.PerformLayout();
-            this.Menu_toolstrip2.ResumeLayout(false);
-            this.Menu_toolstrip2.PerformLayout();
             this.Menu_panel.ResumeLayout(false);
             this.Menu_panel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -481,9 +431,6 @@ namespace TheatreManagerApp
         private Panel Price_panel;
         private Panel Menu_panel;
         private Panel Inventory_panel;
-        private ToolStrip Menu_toolstrip2;
-        private ToolStripLabel toolStripLabel2;
-        private ToolStripButton toolStripButton2;
         private Label TicketPricesLb;
         private Label seniorPrice;
         private Label MatineePriceLb;
@@ -498,7 +445,6 @@ namespace TheatreManagerApp
         private Panel panel1;
         private Label CalendarLb;
         private DataGridView dataGridView1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label MenuLb;
         private Label Low_Stock;
         private ListBox Stock_List;
@@ -512,7 +458,6 @@ namespace TheatreManagerApp
         private DateTimePicker dtpStart;
         private DateTimePicker dtpEnd;
         private Label label2;
-        private ListView listView1;
         private Button RestockBtn;
         private Button DeleteLowStockBtn;
     }

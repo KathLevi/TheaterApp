@@ -15,19 +15,15 @@ namespace TheatreManagerApp
     public partial class AppWindow : Form
     {
         private BindingSource bindingSource1 = new BindingSource();
-        Panel Active_panel;
-
         List<string> MenuList = new List<string>();
         List<string> StockList = new List<string>();
         public AppWindow()
         {
             InitializeComponent();
-            Active_panel = this.Menu_panel;
+           
             dtpStart.Value = DateTime.Now;
             dtpEnd.Value = DateTime.Now.AddDays(1);
             
-            listView1.View = View.Details;
-
             LoadCenterPanel();
             LoadPrices();
             LoadMenuList();
@@ -61,8 +57,7 @@ namespace TheatreManagerApp
             {
                 MessageBox.Show("Oops, error: " + ex.Message + ex.StackTrace);
             }
-        }
-              
+        }   
         private void GetSchedule()
         {
             try
@@ -72,14 +67,12 @@ namespace TheatreManagerApp
                 String Start = dtpStart.Value.ToShortDateString();
                 String End = dtpEnd.Value.ToShortDateString();
                 string query = 
-                    "SELECT C.Date, S.Time, M.Title, M.Rating, T.Capacity " +
+                    "SELECT C.Date, S.Time, M.Title, M.Rating " +
                     "FROM Calendar C " +
                     "JOIN Schedule S " +
                         "ON C.Cal_Id = S.Calendar_Id "  +
                     "JOIN Movie M " +
                         "ON M.Movie_Id = S.Movie_Id " +
-                    "JOIN Theater T " +
-                        "ON T.Theater_Id = S.Theater_Id " +
                     "WHERE '"+ Start + "' < C.Date AND C.Date < '" + End + "' ; ";
                 
                 
@@ -99,8 +92,6 @@ namespace TheatreManagerApp
                 foreach(DataGridViewColumn col in dataGridView1.Columns)
                 {
                     col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-                    
-                    
                 }
             }
             catch (OleDbException ex)
@@ -109,7 +100,7 @@ namespace TheatreManagerApp
             }   
         }
 
-        private void GetScheduleListView()
+       /* private void GetScheduleListView()
         {
             try
             {
@@ -155,6 +146,7 @@ namespace TheatreManagerApp
                 MessageBox.Show("Oops, error: " + ex.Message + ex.StackTrace);
             };
         }
+        */
         private void LoadMenuList()
         {
             try
@@ -280,13 +272,13 @@ namespace TheatreManagerApp
         private void dtpEnd_ValueChanged(object sender, EventArgs e)
         {
             GetSchedule();
-            GetScheduleListView();
+            
         }
 
         private void dtpStart_ValueChanged(object sender, EventArgs e)
         {
             GetSchedule();
-            GetScheduleListView();
+            
         }
 
         private void EditPriceBtn_Click(object sender, EventArgs e)
