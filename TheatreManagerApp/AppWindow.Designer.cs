@@ -62,6 +62,7 @@ namespace TheatreManagerApp
             this.CalendarLb = new System.Windows.Forms.Label();
             this.AdvancedDetailsLb = new System.Windows.Forms.Label();
             this.Image_Movie_Product = new System.Windows.Forms.PictureBox();
+            this.ContextBox = new System.Windows.Forms.ListBox();
             this.Price_panel.SuspendLayout();
             this.Menu_panel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -279,6 +280,7 @@ namespace TheatreManagerApp
             this.Stock_List.Name = "Stock_List";
             this.Stock_List.Size = new System.Drawing.Size(344, 132);
             this.Stock_List.TabIndex = 19;
+            this.Stock_List.SelectedIndexChanged += new System.EventHandler(this.Stock_List_SelectedIndexChanged);
             // 
             // Menu_List
             // 
@@ -289,6 +291,7 @@ namespace TheatreManagerApp
             this.Menu_List.Name = "Menu_List";
             this.Menu_List.Size = new System.Drawing.Size(344, 244);
             this.Menu_List.TabIndex = 18;
+            this.Menu_List.SelectedIndexChanged += new System.EventHandler(this.Menu_List_SelectedIndexChanged);
             // 
             // Low_Stock
             // 
@@ -351,7 +354,6 @@ namespace TheatreManagerApp
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 16;
             this.label1.Text = "Start Date:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dtpStart
             // 
@@ -376,6 +378,7 @@ namespace TheatreManagerApp
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.Size = new System.Drawing.Size(352, 551);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // CalendarLb
             // 
@@ -405,9 +408,18 @@ namespace TheatreManagerApp
             this.Image_Movie_Product.TabIndex = 14;
             this.Image_Movie_Product.TabStop = false;
             // 
+            // ContextBox
+            // 
+            this.ContextBox.FormattingEnabled = true;
+            this.ContextBox.Location = new System.Drawing.Point(732, 221);
+            this.ContextBox.Name = "ContextBox";
+            this.ContextBox.Size = new System.Drawing.Size(318, 433);
+            this.ContextBox.TabIndex = 15;
+            // 
             // AppWindow
             // 
             this.ClientSize = new System.Drawing.Size(1062, 673);
+            this.Controls.Add(this.ContextBox);
             this.Controls.Add(this.Image_Movie_Product);
             this.Controls.Add(this.AdvancedDetailsLb);
             this.Controls.Add(this.panel1);
@@ -460,6 +472,7 @@ namespace TheatreManagerApp
         private Label label2;
         private Button RestockBtn;
         private Button DeleteLowStockBtn;
+        private ListBox ContextBox;
     }
     #endregion
 }
