@@ -394,7 +394,7 @@ namespace TheatreManagerApp
                this.CalendarLb.Size = new System.Drawing.Size(147, 37);
                this.CalendarLb.TabIndex = 13;
                this.CalendarLb.Text = "Calendar";
-               this.CalendarLb.Click += new System.EventHandler(this.CalendarLb_Click);
+               
                // 
                // AdvancedDetailsLb
                // 
