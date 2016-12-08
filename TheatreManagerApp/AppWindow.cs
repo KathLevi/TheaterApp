@@ -348,78 +348,83 @@ namespace TheatreManagerApp
             }
             return 0;
         }
-                
-            
-        
 
-        /*
-        try
-        {
-            OleDbConnection connection = Utility.GetOleDBConnection();
-            connection.Open();
-            string Query = "SELECT M.Prod_Name FROM Menu M WHERE M.Quantity < 50";
-            OleDbCommand cmd = new OleDbCommand(Query, connection);
-            OleDbDataReader rdr = cmd.ExecuteReader();
-            StockList.Clear();
+          private void CalendarLb_Click(object sender, EventArgs e)
+          {
 
-            while (rdr.Read())
-            {
-                StockList.Add(rdr.GetValue(0).ToString());
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Oops, error: " + ex.Message + ex.StackTrace);
-        }
+          }
 
 
 
-     private void GetScheduleListView()
-    {
-        try
-        {
 
-            OleDbConnection connection = Utility.GetOleDBConnection();
-            String Start = dtpStart.Value.ToShortDateString();
-            String End = dtpEnd.Value.ToShortDateString();
-            string query =
-                "SELECT C.Date, S.Time, M.Title, M.Rating, T.Capacity " +
-                "FROM Calendar C " +
-                "JOIN Schedule S " +
-                    "ON C.Cal_Id = S.Calendar_Id " +
-                "JOIN Movie M " +
-                    "ON M.Movie_Id = S.Movie_Id " +
-                "JOIN Theater T " +
-                    "ON T.Theater_Id = S.Theater_Id " +
-                "WHERE '" + Start + "' < C.Date AND C.Date < '" + End + "' ; ";
+          /*
+          try
+          {
+              OleDbConnection connection = Utility.GetOleDBConnection();
+              connection.Open();
+              string Query = "SELECT M.Prod_Name FROM Menu M WHERE M.Quantity < 50";
+              OleDbCommand cmd = new OleDbCommand(Query, connection);
+              OleDbDataReader rdr = cmd.ExecuteReader();
+              StockList.Clear();
+
+              while (rdr.Read())
+              {
+                  StockList.Add(rdr.GetValue(0).ToString());
+              }
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show("Oops, error: " + ex.Message + ex.StackTrace);
+          }
 
 
-            DataTable table = new DataTable();
-            using (connection)
-            {
-                OleDbCommand cmd = new OleDbCommand(query, connection);
-                connection.Open();
-                OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
-                adapter.Fill(table);
-            }
 
-            for (int i = 0; i < table.Rows.Count; i++)
-            {
-                DataRow dr = table.Rows[i];
-                ListViewItem listitem = new ListViewItem(dr["Date"].ToString());
-                listitem.SubItems.Add(dr["Time"].ToString());
-                listitem.SubItems.Add(dr["Title"].ToString());
-                listitem.SubItems.Add(dr["Rating"].ToString());
-                listitem.SubItems.Add(dr["Capacity"].ToString());
-                listView1.Items.Add(listitem);
-            }
+       private void GetScheduleListView()
+      {
+          try
+          {
 
-        }
-        catch (OleDbException ex)
-        {
-            MessageBox.Show("Oops, error: " + ex.Message + ex.StackTrace);
-        };
-    }
-    */
-    }
+              OleDbConnection connection = Utility.GetOleDBConnection();
+              String Start = dtpStart.Value.ToShortDateString();
+              String End = dtpEnd.Value.ToShortDateString();
+              string query =
+                  "SELECT C.Date, S.Time, M.Title, M.Rating, T.Capacity " +
+                  "FROM Calendar C " +
+                  "JOIN Schedule S " +
+                      "ON C.Cal_Id = S.Calendar_Id " +
+                  "JOIN Movie M " +
+                      "ON M.Movie_Id = S.Movie_Id " +
+                  "JOIN Theater T " +
+                      "ON T.Theater_Id = S.Theater_Id " +
+                  "WHERE '" + Start + "' < C.Date AND C.Date < '" + End + "' ; ";
+
+
+              DataTable table = new DataTable();
+              using (connection)
+              {
+                  OleDbCommand cmd = new OleDbCommand(query, connection);
+                  connection.Open();
+                  OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                  adapter.Fill(table);
+              }
+
+              for (int i = 0; i < table.Rows.Count; i++)
+              {
+                  DataRow dr = table.Rows[i];
+                  ListViewItem listitem = new ListViewItem(dr["Date"].ToString());
+                  listitem.SubItems.Add(dr["Time"].ToString());
+                  listitem.SubItems.Add(dr["Title"].ToString());
+                  listitem.SubItems.Add(dr["Rating"].ToString());
+                  listitem.SubItems.Add(dr["Capacity"].ToString());
+                  listView1.Items.Add(listitem);
+              }
+
+          }
+          catch (OleDbException ex)
+          {
+              MessageBox.Show("Oops, error: " + ex.Message + ex.StackTrace);
+          };
+      }
+      */
+     }
 }

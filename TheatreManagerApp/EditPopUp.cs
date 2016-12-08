@@ -36,5 +36,10 @@ namespace TheatreManagerApp
             }
             Close();
         }
-    }
+
+          private void EditPopUp_Load(object sender, EventArgs e)
+          {
+
+          }
+     }
 }

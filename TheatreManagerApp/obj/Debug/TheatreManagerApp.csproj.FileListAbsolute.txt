@@ -121,3 +121,6 @@ C:\Users\agazeley18\Documents\TheaterApp\TheatreManagerApp\obj\Debug\TheatreMana
 C:\Users\agazeley18\Documents\TheaterApp\TheatreManagerApp\obj\Debug\yo-NG\TheatreManagerApp.resources.dll
 C:\Users\agazeley18\Documents\TheaterApp\TheatreManagerApp\obj\Debug\TheatreManagerApp.exe
 C:\Users\agazeley18\Documents\TheaterApp\TheatreManagerApp\obj\Debug\TheatreManagerApp.pdb
+B:\GitHub\TheaterApp\TheatreManagerApp\bin\Debug\TheatreManagerApp.exe.config
+B:\GitHub\TheaterApp\TheatreManagerApp\obj\Debug\TheatreManagerApp.exe
+B:\GitHub\TheaterApp\TheatreManagerApp\obj\Debug\TheatreManagerApp.pdb
