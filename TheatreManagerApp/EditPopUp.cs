@@ -13,10 +13,12 @@ namespace TheatreManagerApp
 {
     public partial class EditPopUp : Form
     {
-        public EditPopUp(string productName)
+        public EditPopUp(string productName, string quantity, string price)
         {
             InitializeComponent();
             ClickedProductNameLb.Text = productName;
+            NewQuantityTxt.Text = quantity;
+            NewPriceTxt.Text = price;
         }
 
         private void SavePopUpBtn_Click(object sender, EventArgs e)

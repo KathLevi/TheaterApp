@@ -13,13 +13,13 @@ namespace TheatreManagerApp
 {
     public partial class PriceEditPopUp : Form
     {
-        public PriceEditPopUp()//int adultPrice, int kidPrice, int seniorPrice, int matPrice
+        public PriceEditPopUp(string kidPrice, string adultPrice, string seniorPrice, string matPrice)
         {
             InitializeComponent();
-            //NewAdultTxt.Text = adultPrice.ToString();
-            //NewKidTxt.Text = kidPrice.ToString();
-            //NewMatTxt.Text = matPrice.ToString();
-            //NewSeniorTxt.Text = seniorPrice.ToString();
+            NewAdultTxt.Text = adultPrice;
+            NewKidTxt.Text = kidPrice;
+            NewMatTxt.Text = matPrice;
+            NewSeniorTxt.Text = seniorPrice;
 
         }
 
@@ -30,7 +30,7 @@ namespace TheatreManagerApp
             {
                 OleDbConnection connection = Utility.GetOleDBConnection();
                 connection.Open();
-                string Query = "UPDATE Box_Office SET price_adult = " + NewAdultTxt.Text + ", price_kid = " + NewKidTxt.Text + ", price_matinee = " + NewMatTxt.Text + ", price_student_senior = " + NewSeniorTxt.Text + "";
+                string Query = "UPDATE Box_Office SET price_adult = " + NewSeniorTxt.Text + ", price_kid = " + NewKidTxt.Text + ", price_matinee = " + NewAdultTxt.Text + ", price_student_senior = " + NewMatTxt.Text + "";
                 OleDbCommand cmd = new OleDbCommand(Query, connection);
                 cmd.ExecuteNonQuery();
             }

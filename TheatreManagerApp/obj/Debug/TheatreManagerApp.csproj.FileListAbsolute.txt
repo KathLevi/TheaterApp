@@ -136,3 +136,15 @@ C:\Users\agazeley18\Desktop\TheaterApp-master\TheaterApp-master\TheatreManagerAp
 C:\Users\agazeley18\Desktop\TheaterApp-master\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.PriceEditPopUp.resources
 C:\Users\agazeley18\Desktop\TheaterApp-master\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.Properties.Resources.resources
 C:\Users\agazeley18\Desktop\TheaterApp-master\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.csproj.GenerateResource.Cache
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\bin\Debug\TheatreManagerApp.exe.config
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.exe
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.pdb
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\bin\Debug\TheatreManagerApp.exe
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\bin\Debug\TheatreManagerApp.pdb
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.csprojResolveAssemblyReference.cache
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.AddPopUp.resources
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.AppWindow.resources
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.EditPopUp.resources
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.PriceEditPopUp.resources
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.Properties.Resources.resources
+C:\Users\klevi18\Desktop\TheaterApp-master\TheatreManagerApp\obj\Debug\TheatreManagerApp.csproj.GenerateResource.Cache

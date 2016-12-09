@@ -147,6 +147,8 @@ namespace TheatreManagerApp
                 int quantity = Convert.ToInt32(row.ItemArray[3]);
                 if (quantity < 50)
                 {
+                    MenuList.Add(row["Prod_Name"].ToString());
+                    //MessageBox.Show(row["Prod_Name"].ToString() + " " + quantity.ToString() + " in MenuList");
                     StockList.Add(row["Prod_Name"].ToString());
                     //MessageBox.Show(row["Prod_Name"].ToString() + " " + quantity.ToString() + " in StockList");
                 }
@@ -213,12 +215,18 @@ namespace TheatreManagerApp
         private void EditBtn_Click(object sender, EventArgs e)
         {
             string productName = Menu_List.SelectedItem.ToString();
+            int index = StockTableSearchProdName(productName);
+            int prodNum = Menu_List.SelectedIndex;
+
+            string quantity = StockTable.Rows[index][3].ToString();
+            string price = StockTable.Rows[index][1].ToString();
 
             //The edit button was clicked
-            EditPopUp editPopUp = new EditPopUp(productName);
+            EditPopUp editPopUp = new EditPopUp(productName, quantity, price);
             editPopUp.ShowDialog();
 
             //Reload database after editing products
+            LoadStockTable();
             LoadListBoxes();
 
         }
@@ -235,7 +243,7 @@ namespace TheatreManagerApp
         private void EditPriceBtn_Click(object sender, EventArgs e)
         {
             //The edit price button was clicked
-            PriceEditPopUp editPrice = new PriceEditPopUp();
+            PriceEditPopUp editPrice = new PriceEditPopUp(kidPrice.Text, adultPrice.Text, seniorPrice.Text, matPrice.Text);
             editPrice.ShowDialog();
 
             //Reload database after editing products
@@ -278,9 +286,14 @@ namespace TheatreManagerApp
         private void RestockBtn_Click(object sender, EventArgs e)
         {
             string productName = Stock_List.SelectedItem.ToString();
+            int index = StockTableSearchProdName(productName);
+            int prodNum = Stock_List.SelectedIndex;
+
+            string quantity = StockTable.Rows[index][3].ToString();
+            string price = StockTable.Rows[index][1].ToString();
 
             //The edit button was clicked
-            EditPopUp editPopUp = new EditPopUp(productName);
+            EditPopUp editPopUp = new EditPopUp(productName, quantity, price);
             editPopUp.ShowDialog();
 
             //Reload database after editing products
