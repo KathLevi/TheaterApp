@@ -428,5 +428,15 @@ namespace TheatreManagerApp
 
             return 2;
         }
-    }
+
+          private void ContextBox_SelectedIndexChanged(object sender, EventArgs e)
+          {
+
+          }
+
+          private void TicketPricesLb_Click(object sender, EventArgs e)
+          {
+
+          }
+     }
 }

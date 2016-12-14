@@ -72,7 +72,7 @@ namespace TheatreManagerApp
                // 
                // Price_panel
                // 
-               this.Price_panel.BackColor = System.Drawing.Color.Maroon;
+               this.Price_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
                this.Price_panel.Controls.Add(this.flowLayoutPanel1);
                this.Price_panel.Controls.Add(this.seniorPrice);
                this.Price_panel.Controls.Add(this.TicketPricesLb);
@@ -109,12 +109,13 @@ namespace TheatreManagerApp
                // TicketPricesLb
                // 
                this.TicketPricesLb.AutoSize = true;
-               this.TicketPricesLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+               this.TicketPricesLb.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.TicketPricesLb.Location = new System.Drawing.Point(3, 1);
                this.TicketPricesLb.Name = "TicketPricesLb";
-               this.TicketPricesLb.Size = new System.Drawing.Size(199, 37);
+               this.TicketPricesLb.Size = new System.Drawing.Size(221, 39);
                this.TicketPricesLb.TabIndex = 2;
                this.TicketPricesLb.Text = "Ticket Prices";
+               this.TicketPricesLb.Click += new System.EventHandler(this.TicketPricesLb_Click);
                // 
                // MatineePriceLb
                // 
@@ -208,7 +209,7 @@ namespace TheatreManagerApp
                // 
                // Menu_panel
                // 
-               this.Menu_panel.BackColor = System.Drawing.Color.Maroon;
+               this.Menu_panel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
                this.Menu_panel.Controls.Add(this.RestockBtn);
                this.Menu_panel.Controls.Add(this.DeleteLowStockBtn);
                this.Menu_panel.Controls.Add(this.EditBtn);
@@ -300,26 +301,26 @@ namespace TheatreManagerApp
                // Low_Stock
                // 
                this.Low_Stock.AutoSize = true;
-               this.Low_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+               this.Low_Stock.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.Low_Stock.Location = new System.Drawing.Point(3, 305);
                this.Low_Stock.Name = "Low_Stock";
-               this.Low_Stock.Size = new System.Drawing.Size(165, 37);
+               this.Low_Stock.Size = new System.Drawing.Size(181, 39);
                this.Low_Stock.TabIndex = 17;
                this.Low_Stock.Text = "Low Stock";
                // 
                // MenuLb
                // 
                this.MenuLb.AutoSize = true;
-               this.MenuLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+               this.MenuLb.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.MenuLb.Location = new System.Drawing.Point(3, 0);
                this.MenuLb.Name = "MenuLb";
-               this.MenuLb.Size = new System.Drawing.Size(96, 37);
+               this.MenuLb.Size = new System.Drawing.Size(105, 39);
                this.MenuLb.TabIndex = 16;
                this.MenuLb.Text = "Menu";
                // 
                // panel1
                // 
-               this.panel1.BackColor = System.Drawing.Color.Maroon;
+               this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
                this.panel1.Controls.Add(this.dtpEnd);
                this.panel1.Controls.Add(this.label2);
                this.panel1.Controls.Add(this.label1);
@@ -371,6 +372,7 @@ namespace TheatreManagerApp
                // 
                // dataGridView1
                // 
+               this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
                this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
                this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
@@ -388,21 +390,20 @@ namespace TheatreManagerApp
                // CalendarLb
                // 
                this.CalendarLb.AutoSize = true;
-               this.CalendarLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+               this.CalendarLb.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.CalendarLb.Location = new System.Drawing.Point(18, 7);
                this.CalendarLb.Name = "CalendarLb";
-               this.CalendarLb.Size = new System.Drawing.Size(147, 37);
+               this.CalendarLb.Size = new System.Drawing.Size(159, 39);
                this.CalendarLb.TabIndex = 13;
                this.CalendarLb.Text = "Calendar";
-               
                // 
                // AdvancedDetailsLb
                // 
                this.AdvancedDetailsLb.AutoSize = true;
-               this.AdvancedDetailsLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+               this.AdvancedDetailsLb.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.AdvancedDetailsLb.Location = new System.Drawing.Point(725, 0);
                this.AdvancedDetailsLb.Name = "AdvancedDetailsLb";
-               this.AdvancedDetailsLb.Size = new System.Drawing.Size(265, 37);
+               this.AdvancedDetailsLb.Size = new System.Drawing.Size(293, 39);
                this.AdvancedDetailsLb.TabIndex = 13;
                this.AdvancedDetailsLb.Text = "Advanced Details";
                // 
@@ -423,10 +424,11 @@ namespace TheatreManagerApp
                this.ContextBox.Name = "ContextBox";
                this.ContextBox.Size = new System.Drawing.Size(318, 433);
                this.ContextBox.TabIndex = 15;
+               this.ContextBox.SelectedIndexChanged += new System.EventHandler(this.ContextBox_SelectedIndexChanged);
                // 
                // AppWindow
                // 
-               this.BackColor = System.Drawing.Color.Maroon;
+               this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
                this.ClientSize = new System.Drawing.Size(1062, 673);
                this.Controls.Add(this.ContextBox);
                this.Controls.Add(this.Image_Movie_Product);

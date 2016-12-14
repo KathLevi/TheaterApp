@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+               System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PriceEditPopUp));
                this.NewAdultTxt = new System.Windows.Forms.TextBox();
                this.NewKidTxt = new System.Windows.Forms.TextBox();
                this.SavePopUpBtn = new System.Windows.Forms.Button();
@@ -66,40 +67,40 @@
                // MatineePriceLb
                // 
                this.MatineePriceLb.AutoSize = true;
-               this.MatineePriceLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+               this.MatineePriceLb.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.MatineePriceLb.Location = new System.Drawing.Point(13, 168);
                this.MatineePriceLb.Name = "MatineePriceLb";
-               this.MatineePriceLb.Size = new System.Drawing.Size(125, 24);
+               this.MatineePriceLb.Size = new System.Drawing.Size(139, 23);
                this.MatineePriceLb.TabIndex = 20;
                this.MatineePriceLb.Text = "Matinee Price";
                // 
                // SSPriceLb
                // 
                this.SSPriceLb.AutoSize = true;
-               this.SSPriceLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+               this.SSPriceLb.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.SSPriceLb.Location = new System.Drawing.Point(13, 115);
                this.SSPriceLb.Name = "SSPriceLb";
-               this.SSPriceLb.Size = new System.Drawing.Size(182, 24);
+               this.SSPriceLb.Size = new System.Drawing.Size(210, 23);
                this.SSPriceLb.TabIndex = 19;
                this.SSPriceLb.Text = "Senior/Student Price";
                // 
                // AdultPriceLb
                // 
                this.AdultPriceLb.AutoSize = true;
-               this.AdultPriceLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+               this.AdultPriceLb.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.AdultPriceLb.Location = new System.Drawing.Point(13, 62);
                this.AdultPriceLb.Name = "AdultPriceLb";
-               this.AdultPriceLb.Size = new System.Drawing.Size(110, 24);
+               this.AdultPriceLb.Size = new System.Drawing.Size(124, 23);
                this.AdultPriceLb.TabIndex = 18;
                this.AdultPriceLb.Text = "Adults Price";
                // 
                // KidsPriceLb
                // 
                this.KidsPriceLb.AutoSize = true;
-               this.KidsPriceLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+               this.KidsPriceLb.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.KidsPriceLb.Location = new System.Drawing.Point(13, 9);
                this.KidsPriceLb.Name = "KidsPriceLb";
-               this.KidsPriceLb.Size = new System.Drawing.Size(94, 24);
+               this.KidsPriceLb.Size = new System.Drawing.Size(104, 23);
                this.KidsPriceLb.TabIndex = 17;
                this.KidsPriceLb.Text = "Kids Price";
                // 
@@ -121,7 +122,7 @@
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.BackColor = System.Drawing.Color.Maroon;
+               this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
                this.ClientSize = new System.Drawing.Size(284, 261);
                this.Controls.Add(this.NewMatTxt);
                this.Controls.Add(this.NewSeniorTxt);
@@ -132,6 +133,7 @@
                this.Controls.Add(this.SavePopUpBtn);
                this.Controls.Add(this.NewAdultTxt);
                this.Controls.Add(this.NewKidTxt);
+               this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
                this.Name = "PriceEditPopUp";
                this.Text = "PriceEditPopUp";
                this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+               System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPopUp));
                this.NewQuantityTxt = new System.Windows.Forms.TextBox();
                this.NewPriceTxt = new System.Windows.Forms.TextBox();
                this.SavePopUpBtn = new System.Windows.Forms.Button();
@@ -64,30 +65,30 @@
                // QuantityPopUpLb
                // 
                this.QuantityPopUpLb.AutoSize = true;
-               this.QuantityPopUpLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.QuantityPopUpLb.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.QuantityPopUpLb.Location = new System.Drawing.Point(12, 147);
                this.QuantityPopUpLb.Name = "QuantityPopUpLb";
-               this.QuantityPopUpLb.Size = new System.Drawing.Size(68, 20);
+               this.QuantityPopUpLb.Size = new System.Drawing.Size(79, 19);
                this.QuantityPopUpLb.TabIndex = 9;
                this.QuantityPopUpLb.Text = "Quantity";
                // 
                // PricePopUpLb
                // 
                this.PricePopUpLb.AutoSize = true;
-               this.PricePopUpLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.PricePopUpLb.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.PricePopUpLb.Location = new System.Drawing.Point(12, 83);
                this.PricePopUpLb.Name = "PricePopUpLb";
-               this.PricePopUpLb.Size = new System.Drawing.Size(44, 20);
+               this.PricePopUpLb.Size = new System.Drawing.Size(50, 19);
                this.PricePopUpLb.TabIndex = 8;
                this.PricePopUpLb.Text = "Price";
                // 
                // NewProductNameLb
                // 
                this.NewProductNameLb.AutoSize = true;
-               this.NewProductNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.NewProductNameLb.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.NewProductNameLb.Location = new System.Drawing.Point(12, 20);
                this.NewProductNameLb.Name = "NewProductNameLb";
-               this.NewProductNameLb.Size = new System.Drawing.Size(110, 20);
+               this.NewProductNameLb.Size = new System.Drawing.Size(124, 19);
                this.NewProductNameLb.TabIndex = 7;
                this.NewProductNameLb.Text = "Product Name";
                // 
@@ -104,7 +105,7 @@
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.BackColor = System.Drawing.Color.Maroon;
+               this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
                this.ClientSize = new System.Drawing.Size(284, 261);
                this.Controls.Add(this.ClickedProductNameLb);
                this.Controls.Add(this.NewQuantityTxt);
@@ -113,6 +114,7 @@
                this.Controls.Add(this.QuantityPopUpLb);
                this.Controls.Add(this.PricePopUpLb);
                this.Controls.Add(this.NewProductNameLb);
+               this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
                this.Name = "EditPopUp";
                this.Text = "Edit Product";
                this.Load += new System.EventHandler(this.EditPopUp_Load);
